@@ -1,5 +1,26 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block css_files %}
+<link rel="stylesheet" href="{% static 'sports/create-match.css' %}">
+{% endblock css_files %}k
 
 {% block content %}
-
+<div class="form">
+    <div class="title">Welcome</div>
+    <div class="subtitle">Create A New Match</div>
+    <div class="input-container ic1">
+        <input id="firstname" class="input" type="text" placeholder="First Name" />
+        <label for="firstname">First name</label>
+    </div>
+    <div class="input-container ic2">
+        <input id="lastname" class="input" type="text" placeholder="Last Name" />
+        <label for="lastname">Last name</label>
+    </div>
+    <div class="input-container ic2">
+        <input id="email" class="input" type="text" placeholder="Email" />
+        <label for="email">Email</>
+    </div>
+    <button type="text" class="submit">Submit</button>
+</div>
 {% endblock content %}

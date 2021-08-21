@@ -8,13 +8,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sphera</title>
     <link rel="stylesheet" href="{% static 'base.css' %}">
+    {% block css_files %}{% endblock css_files %}
 </head>
 
 <body>
-    <ul>
-        <li><a href="">Sphera</a></li>
-        <li><a href="">Matches</a></li>
-        <li><a href="">Create Match</a></li>
+    <ul class="nav-menu">
+        <li><a href="{% url 'index' %}">Sphera</a></li>
+        <li><a href="{% url 'all_matches' %}">Matches</a></li>
+        <li><a href="{% url 'match_form' %}">Create Match</a></li>
     </ul>
     {% block content %}{% endblock content %}
 </body>
