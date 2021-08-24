@@ -12,11 +12,13 @@
 </head>
 
 <body>
-    <ul class="nav-menu">
-        <li><a href="{% url 'index' %}">Sphera</a></li>
-        <li><a href="{% url 'all_matches' %}">Matches</a></li>
-        <li><a href="{% url 'match_form' %}">Create Match</a></li>
-    </ul>
+    <nav class="nav">
+        <ul>
+            <li><a href="{% url 'index' %}">Sphera</a></li>
+            <li><a href="{% url 'match_form' %}">Create Match</a></li>
+            <li><a href="{% url 'all_matches' %}">Matches</a></li>
+        </ul>
+    </nav>
     {% block content %}{% endblock content %}
 </body>
 
