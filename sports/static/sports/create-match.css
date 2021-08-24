@@ -2,9 +2,9 @@
   background-color: #15172b;
   border-radius: 20px;
   box-sizing: border-box;
-  height: 500px;
+  height: 700px;
   padding: 20px;
-  width: 320px;
+  width: 360px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -15,6 +15,7 @@
   font-size: 36px;
   font-weight: 600;
   margin-top: 30px;
+  text-align: center;
 }
 
 .subtitle {
@@ -23,6 +24,7 @@
   font-size: 16px;
   font-weight: 600;
   margin-top: 10px;
+  text-align: center;
 }
 
 .input-container {
@@ -52,6 +54,19 @@
   width: 100%;
 }
 
+.input2 {
+  background-color: #303245;
+  border-radius: 12px;
+  border: 0;
+  box-sizing: border-box;
+  color: #eee;
+  font-size: 18px;
+  font-family: sans-serif;
+  outline: 0;
+  padding: 4px 20px 0;
+  width: 100%;
+}
+
 .submit {
   background-color: #08d;
   border-radius: 12px;
@@ -61,7 +76,7 @@
   cursor: pointer;
   font-size: 18px;
   height: 50px;
-  margin-top: 38px;
+  margin-top: 175px;
   outline: 0;
   text-align: center;
   width: 100%;
