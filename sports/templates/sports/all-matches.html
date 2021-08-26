@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+{% for match in matches %}
+<div>
+    <a href="{% url 'match-detail' match.id %}">
+        <h1>{{match.title}}</h1>
+        <h2>{{match.location}}</h2>
+        <h2>{{match.date_time}}</h2>
+    </a>
+</div>
+{% endfor %}
+{% endblock content %}

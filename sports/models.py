@@ -17,3 +17,6 @@ class Match(models.Model):
     location = models.CharField(max_length=200)
     date_time = models.DateTimeField()
     host = models.ForeignKey('Host', on_delete=models.CASCADE, null=True)
+
+    def __str__(self):
+        return f'{self.title} at {self.location}'
