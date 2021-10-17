@@ -2,13 +2,29 @@
 {% load static %}
 
 {% block content %}
-{% for match in matches %}
-<div>
-    <a href="{% url 'match-detail' match.id %}">
-        <h1>{{match.title}}</h1>
-        <h2>{{match.location}}</h2>
-        <h2>{{match.date_time}}</h2>
-    </a>
+<div class="bg-light py-5">
+    <div class="container px-5 my-5">
+        <div class="row">
+            {% for match in matches %}
+            <div class="col-lg-4 mb-5">
+                <div class="card h-100 bg-dark shadow border-0">
+                    <a href="{% url 'match-detail' match.id %}" style="text-decoration: none; color: white">
+                        <img class="card-img-top"
+                            src="https://images.unsplash.com/photo-1551958219-acbc608c6377?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80"
+                            alt="Card image">
+                        <div class="card-body p-4">
+                            <h4 class="card-title">{{match.title}}</h4>
+                            <p class="card-text">{{match.location}}: {{match.date_time}}</p>
+                        </div>
+                        <div class="card-footer mt-auto">
+                            <a href="{% url 'match-detail' match.id %}" class="btn btn-light">See
+                                Details</a>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
 </div>
-{% endfor %}
 {% endblock content %}
