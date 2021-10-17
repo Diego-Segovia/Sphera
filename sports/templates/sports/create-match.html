@@ -3,10 +3,51 @@
 {% load widget_tweaks %}
 
 {% block css_files %}
-<link rel="stylesheet" href="{% static 'sports/create-match.css' %}">
+<link rel="stylesheet" href="{% static 'sports/creat-match.css' %}">
 {% endblock css_files %}k
 
 {% block content %}
+<!-- Form Section Try -->
+<section class="bg-dark py-5 mb-4">
+    <div class="container">
+        <div class="bg-light rounded-3 py-5 px-4 px-md-5 mb-5">
+            <div class="text-center mb-5">
+                <h1 class="fw-bolder">Create Match</h1>
+                <p class="lead fw-normal text-muted mb-0">Some text</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <form action="">
+                        <div class="form-floating mb-4">
+                            <input type="text" class="form-control" id="event-name" name="Event Name"
+                                placeholder="Event">
+                            <label for="event-name">Event Name</label>
+                        </div>
+                        <div class="form-floating mb-4">
+                            <input type="text" class="form-control" id="location" name="Location"
+                                placeholder="Location">
+                            <label for="location">Location</label>
+                        </div>
+                        <div class="form-floating mb-4">
+                            <input type="text" class="form-control" id="date" name="Date" placeholder="Date">
+                            <label for="date">Date</label>
+                        </div>
+                        <div class="form-floating mb-4">
+                            <input type="text" class="form-control" id="time" name="Time" placeholder="Time">
+                            <label for="time">Time</label>
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-dark btn">Create</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+<!-- Form -->
 <div class="form">
     <div class="title">Welcome</div>
     <div class="subtitle">Let's create a match!</div>
