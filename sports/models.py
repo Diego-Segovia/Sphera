@@ -15,7 +15,8 @@ class Match(models.Model):
     title = models.CharField(max_length=100)
     details = models.TextField()
     location = models.CharField(max_length=200)
-    date_time = models.DateTimeField()
+    date = models.DateField(null=True)
+    time = models.TimeField(null=True)
     host = models.ForeignKey('Host', on_delete=models.CASCADE, null=True)
 
     def __str__(self):

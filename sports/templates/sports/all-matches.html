@@ -14,7 +14,8 @@
                             alt="Card image">
                         <div class="card-body p-4">
                             <h4 class="card-title">{{match.title}}</h4>
-                            <p class="card-text">{{match.location}}: {{match.date_time}}</p>
+                            <p class="card-text">{{match.location}}</p>
+                            <p class="card-text">{{match.date}} {{match.time}}</p>
                         </div>
                         <div class="card-footer mt-auto">
                             <a href="{% url 'match-detail' match.id %}" class="btn btn-light">See

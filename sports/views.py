@@ -1,3 +1,4 @@
+from django.forms.widgets import DateInput
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from .forms import MatchForm
@@ -10,7 +11,14 @@ def create_match(request):
     if request.method == 'POST':
         form = MatchForm(request.POST)
         if form.is_valid():
-            form.save()
+            created_match = Match(
+                title = form.cleaned_data['event_name'],
+                location = form.cleaned_data['event_location'],
+                date = form.cleaned_data['event_date'],
+                time = form.cleaned_data['event_time'],
+                details = form.cleaned_data['event_details']
+            )
+            created_match.save()
             return HttpResponseRedirect('match-created')
     else:
         form = MatchForm()

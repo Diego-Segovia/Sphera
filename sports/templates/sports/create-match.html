@@ -3,7 +3,6 @@
 {% load widget_tweaks %}
 
 {% block css_files %}
-<link rel="stylesheet" href="{% static 'sports/creat-match.css' %}">
 {% endblock css_files %}k
 
 {% block content %}
@@ -17,24 +16,29 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-6">
-                    <form action="">
+                    <form action="" method="post">
+                        {% csrf_token %}
                         <div class="form-floating mb-4">
-                            <input type="text" class="form-control" id="event-name" name="Event Name"
-                                placeholder="Event">
-                            <label for="event-name">Event Name</label>
+                            <div class="form-floating mb-4">
+                                {{form.event_name|add_class:"form-control"}}
+                                {{form.event_name.label_tag}}
+                            </div>
                         </div>
                         <div class="form-floating mb-4">
-                            <input type="text" class="form-control" id="location" name="Location"
-                                placeholder="Location">
-                            <label for="location">Location</label>
+                            {{form.event_location|add_class:"form-control"}}
+                            {{form.event_location.label_tag}}
                         </div>
                         <div class="form-floating mb-4">
-                            <input type="text" class="form-control" id="date" name="Date" placeholder="Date">
-                            <label for="date">Date</label>
+                            {{form.event_date|add_class:"form-control"}}
+                            {{form.event_date.label_tag}}
                         </div>
                         <div class="form-floating mb-4">
-                            <input type="text" class="form-control" id="time" name="Time" placeholder="Time">
-                            <label for="time">Time</label>
+                            {{form.event_time|add_class:"form-control"}}
+                            {{form.event_time.label_tag}}
+                        </div>
+                        <div class="mb-4">
+                            {{form.event_details.label_tag}}
+                            {{form.event_details|add_class:"form-control"}}
                         </div>
                         <div class="d-grid">
                             <button type="submit" class="btn btn-dark btn">Create</button>
@@ -47,29 +51,4 @@
     </div>
     </div>
 </section>
-<!-- Form -->
-<div class="form">
-    <div class="title">Welcome</div>
-    <div class="subtitle">Let's create a match!</div>
-    <form action="" method="post">
-        {% csrf_token %}
-        <div class="input-container ic1">
-            {{form.title|add_class:"input"}}
-            {{form.title.errors}}
-        </div>
-        <div class="input-container ic2">
-            {{form.location|add_class:"input"}}
-            {{form.location.errors}}
-        </div>
-        <div class="input-container ic2">
-            {{form.date_time|add_class:"input"}}
-            {{form.date_time.errors}}
-        </div>
-        <div class="input-container ic2">
-            {{form.details|add_class:"input2"}}
-            {{form.details.errors}}
-        </div>
-        <button type="submit" class="submit">Create</button>
-    </form>
-</div>
 {% endblock content %}
