@@ -1,1 +1,1 @@
-![Markdown Logo](./static/sphera_logo.png)
+![Markdown Logo](./static/spheraLogo1.png)
